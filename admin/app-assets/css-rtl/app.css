@@ -56525,28 +56525,28 @@ form .has-icon-left .form-control , .select2-container--default .select2-search-
 /*--------------------
 Chechout Form
 --------------------*/
-.form fieldset {
+.credit_card .form fieldset {
   border: none;
   padding: 0;
   padding: 3px 0;
   position: relative;
   clear: both;
 }
-.form fieldset.fieldset-expiration {
+.credit_card .form fieldset.fieldset-expiration {
   float: left;
   /* width: 60%; */
 }
-.form fieldset.fieldset-expiration .select {
+.credit_card .form fieldset.fieldset-expiration .select {
   width: 84px;
   margin-right: 12px;
   float: left;
 }
-.form fieldset.fieldset-ccv {
+.credit_card .form fieldset.fieldset-ccv {
   clear: none;
   float: right;
   width: 86px;
 }
-.form fieldset label {
+.credit_card .form fieldset label {
   display: block;
   text-transform: uppercase;
   font-size: 11px;
@@ -56555,8 +56555,8 @@ Chechout Form
   font-weight: bold;
   font-family: cairo;
 }
-.form fieldset input,
-.form fieldset .select {
+.credit_card .form fieldset input,
+.credit_card .form fieldset .select {
   width: 100%;
   height: 33px;
   color: #333333;
@@ -56567,20 +56567,20 @@ Chechout Form
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-.form fieldset input.input-cart-number,
-.form fieldset .select.input-cart-number {
+.credit_card .form fieldset input.input-cart-number,
+.credit_card .form fieldset .select.input-cart-number {
   width: 82px;
   display: inline-block;
   margin-right: 8px;
 }
-.form fieldset input.input-cart-number:last-child,
-.form fieldset .select.input-cart-number:last-child {
+.credit_card .form fieldset input.input-cart-number:last-child,
+.credit_card .form fieldset .select.input-cart-number:last-child {
   margin-right: 0;
 }
-.form fieldset .select {
+.credit_card .form fieldset .select {
   position: relative;
 }
-.form fieldset .select::after {
+.credit_card .form fieldset .select::after {
   content: '';
   border-top: 8px solid #222;
   border-left: 4px solid transparent;
@@ -56591,7 +56591,7 @@ Chechout Form
   right: 10px;
   pointer-events: none;
 }
-.form fieldset .select select {
+.credit_card .form fieldset .select select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -56604,11 +56604,11 @@ Chechout Form
   right: 0px;
   background: none;
 }
-.form fieldset .select select :-moz-focusring {
+.credit_card .form fieldset .select select :-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-.form button {
+.credit_card .form button {
   width: 100%;
   outline: none !important;
   background: #7c3d53;
@@ -56621,17 +56621,17 @@ Chechout Form
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin-top: 15px;
 }
-.form button:hover{
+.credit_card .form button:hover{
   color: #fff;
 }
-.form button .fa {
+.credit_card .form button .fa {
   margin-right: 6px;
 }
 
 /*--------------------
 Checkout
 --------------------*/
-.checkout {
+.credit_card .checkout {
   margin: 100px auto 30px;
   position: relative;
   width: 460px;
@@ -56644,7 +56644,7 @@ Checkout
 /*--------------------
 Credit Card
 --------------------*/
-.credit-card-box {
+.credit_card .credit-card-box {
   -webkit-perspective: 1000;
           perspective: 1000;
   width: 400px;
@@ -56655,12 +56655,12 @@ Credit Card
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.credit-card-box:hover .flip, .credit-card-box.hover .flip {
+.credit_card .credit-card-box:hover .flip, .credit_card .credit-card-box.hover .flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.credit-card-box .front,
-.credit-card-box .back {
+.credit_card .credit-card-box .front,
+.credit_card .credit-card-box .back {
   width: 400px;
   height: 250px;
   border-radius: 15px;
@@ -56675,8 +56675,8 @@ Credit Card
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
-.credit-card-box .front::before,
-.credit-card-box .back::before {
+.credit_card .credit-card-box .front::before,
+.credit_card .credit-card-box .back::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -56686,37 +56686,37 @@ Credit Card
   background-size: cover;
   opacity: .05;
 }
-.credit-card-box .flip {
+.credit_card .credit-card-box .flip {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
 }
-.credit-card-box .logo {
+.credit_card .credit-card-box .logo {
   position: absolute;
   top: 9px;
   right: 20px;
   width: 60px;
 }
-.credit-card-box .logo svg {
+.credit_card .credit-card-box .logo svg {
   width: 100%;
   height: auto;
   fill: #fff;
 }
-.credit-card-box .front {
+.credit_card .credit-card-box .front {
   z-index: 2;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
-.credit-card-box .back {
+.credit_card .credit-card-box .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.credit-card-box .back .logo {
+.credit_card .credit-card-box .back .logo {
   top: 185px;
 }
-.credit-card-box .chip {
+.credit_card .credit-card-box .chip {
   position: absolute;
   width: 60px;
   height: 45px;
@@ -56725,7 +56725,7 @@ Credit Card
   background: linear-gradient(135deg, #ddccf0 0%, #d1e9f5 44%, #f8ece7 100%);
   border-radius: 8px;
 }
-.credit-card-box .chip::before {
+.credit_card .credit-card-box .chip::before {
   content: '';
   position: absolute;
   top: 0;
@@ -56738,7 +56738,7 @@ Credit Card
   height: 70%;
   border-radius: 5px;
 }
-.credit-card-box .strip {
+.credit_card .credit-card-box .strip {
   background: linear-gradient(135deg, #404040, #1a1a1a);
   position: absolute;
   width: 100%;
@@ -56746,14 +56746,14 @@ Credit Card
   top: 30px;
   left: 0;
 }
-.credit-card-box .number {
+.credit_card .credit-card-box .number {
   position: absolute;
   margin: 0 auto;
   top: 103px;
   left: 19px;
   font-size: 38px;
 }
-.credit-card-box label {
+.credit_card .credit-card-box label {
   font-size: 10px;
   letter-spacing: 1px;
   text-shadow: none;
@@ -56763,8 +56763,8 @@ Credit Card
   display: block;
   margin-bottom: 3px;
 }
-.credit-card-box .card-holder,
-.credit-card-box .card-expiration-date {
+.credit_card .credit-card-box .card-holder,
+.credit_card .credit-card-box .card-expiration-date {
   position: absolute;
   margin: 0 auto;
   top: 180px;
@@ -56772,12 +56772,12 @@ Credit Card
   font-size: 22px;
   text-transform: capitalize;
 }
-.credit-card-box .card-expiration-date {
+.credit_card .credit-card-box .card-expiration-date {
   text-align: right;
   left: auto;
   right: 20px;
 }
-.credit-card-box .ccv {
+.credit_card .credit-card-box .ccv {
   height: 36px;
   background: #fff;
   width: 91%;
@@ -56791,7 +56791,7 @@ Credit Card
   text-align: right;
   padding: 10px;
 }
-.credit-card-box .ccv label {
+.credit_card .credit-card-box .ccv label {
   margin: -28px 0 14px;
   color: #fff;
 }
