@@ -30,9 +30,9 @@ $(document).ready(function() {
     placeholder: "أسم العميل",
   });
 
-  $('.add_user_offer').select2({
+  $('.add_user_unit').select2({
     // theme: "classic",
-    placeholder: "نوع القسط",
+    placeholder: "اختار الوحدة",
   });
   // Layout Config
 

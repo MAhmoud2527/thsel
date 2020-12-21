@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Mahmoud Ahmed">
-    <title>عميل جديد</title>
+    <title>اضافة وحدة جديدة</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -69,12 +69,21 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-sub nav-item active"><a href="#"><i class="icon-users"></i><span data-i18n="" class="menu-title"> العملاء</span></a>
+              <li class="has-sub nav-item"><a href="#"><i class="icon-users"></i><span data-i18n="" class="menu-title"> العملاء</span></a>
                 <ul class="menu-content">
-                  <li class="active"><a href="add-user.html" class="menu-item"> أضافة عميل جديد  </a>
+                  <li class=""><a href="add-user.html" class="menu-item"> أضافة عميل جديد  </a>
                   </li>
                   <li>
                     <a href="all-user.html" class="menu-item"> كل العملاء </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-sub nav-item active"><a href="#"><i class="icon-grid"></i><span data-i18n="" class="menu-title"> الوحدات</span></a>
+                <ul class="menu-content">
+                  <li class="active"><a href="add-units.html" class="menu-item"> أضافة وحدة  جديدة  </a>
+                  </li>
+                  <li>
+                    <a href="all-units.html" class="menu-item"> كل الوحدات </a>
                   </li>
                 </ul>
               </li>
@@ -138,8 +147,8 @@
                 <div class="card add_cash">
                   <div class="card-header">
                     <h4 class="card-title" id="bordered-layout-icons">
-                      <i class="ft-user-plus"></i> 
-                      أضافة عميل جديد
+                      <i class="icon-grid"></i> 
+                      أضافة وحدة جديدة
                     </h4>
                    </div>
                   <div class="card-body">
@@ -148,102 +157,52 @@
                         <div class="form-body">
 
                           <div class="form-group row">
-                            <label class="col-md-3 label-control" for="nameUser">أسم العميل  </label>
+                            <label class="col-md-3 label-control" for="nameUser">أسم الوحدة  </label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="text" id="nameUser" class="form-control" placeholder="الاسم العميل ثلاثي" name="name">
+                                <input type="text" id="nameUser" class="form-control" placeholder="أسم الوحدة" name="name">
                                 <div class="form-control-position">
-                                  <i class="ft-user"></i>
+                                  <i class="ft-grid"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label class="col-md-3 label-control" for="id"> الرقم القومى</label>
+                            <label class="col-md-3 label-control" for="id"> عدد الشقق المتاحة</label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="number" id="id" class="form-control" placeholder="الرقم القومي" name="employeename">
+                                <input type="number" id="id" class="form-control" placeholder="عدد الشقق المتاحة" name="employeename">
                                 <div class="form-control-position">
-                                  <i class="ft-credit-card"></i>
+                                  <i class="ft-plus-square"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
                         
                           <div class="form-group row">
-                            <label class="col-md-3 label-control" for="phone">رقم الموبيل 1 </label>
+                            <label class="col-md-3 label-control" for="phone">مساحة الوحدة </label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="number" id="phone" class="form-control" placeholder="رقم الموبيل" name="userPhone">
+                                <input type="number" id="phone" class="form-control" placeholder="مساحة الوحدة" name="userPhone">
                                 <div class="form-control-position">
-                                  <i class="ft-phone"></i>
+                                  <i class="ft-package"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <div class="form-group row">
-                            <label class="col-md-3 label-control" for="phone">رقم الموبيل 2</label>
+                          <div class="form-group row last">
+                            <label class="col-md-3 label-control" for="address">عنوان الوحدة</label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="number" id="phone" class="form-control" placeholder="رقم الموبيل ( اختياري )" name="userPhone">
-                                <div class="form-control-position">
-                                  <i class="ft-phone"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        
-                          <div class="form-group row">
-                            <label class="col-md-3 label-control" for="address">العنوان</label>
-                            <div class="col-md-9">
-                              <div class="position-relative has-icon-left">
-                                <input type="text" id="address" class="form-control" placeholder="العنوان" name="employeename">
+                                <input type="text" id="address" class="form-control" placeholder="عنوان الوحدة" name="employeename">
                                 <div class="form-control-position">
                                   <i class="ft-map"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
-
-          
-                          <div class="form-group row ">
-                            <label class="col-md-3 label-control" for="timesheetinput7">ملاحظات</label>
-                            <div class="col-md-9">
-                              <div class="position-relative has-icon-left">
-                                <textarea id="timesheetinput7" rows="5" class="form-control" name="notes" placeholder="اضف ملاحظات عن العميل هنا"></textarea>
-                                <div class="form-control-position">
-                                  <i class="ft-file"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-          
-                        <div class="form-group row">
-                          <label class="col-md-3 label-control" for="nameUser">أسم الدخول  </label>
-                          <div class="col-md-9">
-                            <div class="position-relative has-icon-left">
-                              <input type="text" id="nameUser" class="form-control" placeholder="اسم العميل " name="nameLogin">
-                              <div class="form-control-position">
-                                <i class="ft-user"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="form-group row last">
-                          <label class="col-md-3 label-control" for="password">كلمة المرور</label>
-                          <div class="col-md-9">
-                            <div class="position-relative has-icon-left">
-                              <input type="password" id="password" class="form-control" placeholder="كلمة المرور" name="password">
-                              <div class="form-control-position">
-                                <i class="ft-lock"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
 
                         <div class="form-actions right">
                           <button type="button" class="btn btn-raised btn-primary">

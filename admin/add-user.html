@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Mahmoud Ahmed">
-    <title> تعديل الحساب</title>
+    <title>عميل جديد</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -16,17 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
     <!-- font icons-->
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/fonts/feather/style.min.css">
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/vendors/css/perfect-scrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/vendors/css/prism.min.css">
-    <link href="admin/app-assets/css-rtl/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
+    <link href="app-assets/css-rtl/select2.min.css" rel="stylesheet" />
     <!-- END VENDOR CSS-->
 
     <!-- BEGIN APEX CSS-->
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/css-rtl/app.css">
-    <link rel="stylesheet" type="text/css" href="admin/app-assets/css-rtl/custom-rtl.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css-rtl/app.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css-rtl/custom-rtl.css">
     <!-- END APEX CSS-->
     <!-- BEGIN Page Level CSS-->
     <!-- END Page Level CSS-->
@@ -41,7 +41,7 @@
 
       <!-- main menu-->
       <!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
-      <div data-active-color="white" data-background-color="black" data-image="admin/app-assets/img/sidebar-bg/01.jpg" class="app-sidebar">
+      <div data-active-color="white" data-background-color="black" data-image="app-assets/img/sidebar-bg/01.jpg" class="app-sidebar">
         <!-- main menu header-->
         <!-- Sidebar Header For Starter Kit starts-->
         <div class="sidebar-header">
@@ -59,6 +59,9 @@
               <li class="has-sub nav-item "><a href="#"><i class="icon-layers"></i><span data-i18n="" class="menu-title"> الاقساط</span></a>
                 <ul class="menu-content">
                   <li class="">
+                    <a href="add.html" class="menu-item"> أضافة قسط جديد </a>
+                  </li>
+                  <li class="">
                     <a href="total.html" class="menu-item"> كل الاقساط </a>
                   </li>
                   <li class="">
@@ -66,9 +69,27 @@
                   </li>
                 </ul>
               </li>
-              <li class="has-sub nav-item active"><a href="#"><i class="icon-settings"></i><span data-i18n="" class="menu-title"> الاعدادات   </span></a>
+              <li class="has-sub nav-item active"><a href="#"><i class="icon-users"></i><span data-i18n="" class="menu-title"> العملاء</span></a>
                 <ul class="menu-content">
-                  <li class="active"> <a href="profile.html" class="menu-item"> تعديل الحساب    </a>
+                  <li class="active"><a href="add-user.html" class="menu-item"> أضافة عميل جديد  </a>
+                  </li>
+                  <li>
+                    <a href="all-user.html" class="menu-item"> كل العملاء </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-sub nav-item "><a href="#"><i class="icon-grid"></i><span data-i18n="" class="menu-title"> الوحدات</span></a>
+                <ul class="menu-content">
+                  <li class=""><a href="add-units.html" class="menu-item"> أضافة وحدة  جديدة  </a>
+                  </li>
+                  <li>
+                    <a href="all-units.html" class="menu-item"> كل الوحدات </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-sub nav-item"><a href="#"><i class="icon-settings"></i><span data-i18n="" class="menu-title"> الاعدادات   </span></a>
+                <ul class="menu-content">
+                  <li><a href="profile.html" class="menu-item"> تعديل الحساب    </a>
                   </li>
                   <li>
                     <a href="index.html" class="menu-item">  تسجيل الخروج  </a>
@@ -126,8 +147,8 @@
                 <div class="card add_cash">
                   <div class="card-header">
                     <h4 class="card-title" id="bordered-layout-icons">
-                      <i class="ft-edit"></i>
-                      تعديل الحساب
+                      <i class="ft-user-plus"></i> 
+                      أضافة عميل جديد
                     </h4>
                    </div>
                   <div class="card-body">
@@ -136,53 +157,103 @@
                         <div class="form-body">
 
                           <div class="form-group row">
-                            <label class="col-md-3 label-control" for="nameUser">أسم الدخول  </label>
+                            <label class="col-md-3 label-control" for="nameUser">أسم العميل  </label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="text" disabled id="nameUser" class="form-control" placeholder=" UserName " name="nameLogin" value="UserName">
+                                <input type="text" id="nameUser" class="form-control" placeholder="الاسم العميل ثلاثي" name="name">
                                 <div class="form-control-position">
                                   <i class="ft-user"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
-  
-                          <div class="form-group row last">
-                            <label class="col-md-3 label-control" for="password"> كلمة المرور الحالية</label>
+
+                          <div class="form-group row">
+                            <label class="col-md-3 label-control" for="id"> الرقم القومى</label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="password" id="password" class="form-control" placeholder="كلمة المرور الحالية" name="password">
+                                <input type="number" id="id" class="form-control" placeholder="الرقم القومي" name="employeename">
                                 <div class="form-control-position">
-                                  <i class="ft-lock"></i>
+                                  <i class="ft-credit-card"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="form-group row">
+                            <label class="col-md-3 label-control" for="phone">رقم الموبيل 1 </label>
+                            <div class="col-md-9">
+                              <div class="position-relative has-icon-left">
+                                <input type="number" id="phone" class="form-control" placeholder="رقم الموبيل" name="userPhone">
+                                <div class="form-control-position">
+                                  <i class="ft-phone"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <div class="form-group row last">
-                            <label class="col-md-3 label-control" for="password"> كلمة المرور الجديدة</label>
+                          <div class="form-group row">
+                            <label class="col-md-3 label-control" for="phone">رقم الموبيل 2</label>
                             <div class="col-md-9">
                               <div class="position-relative has-icon-left">
-                                <input type="password" id="password" class="form-control" placeholder="كلمة المرور الجديدة" name="password">
+                                <input type="number" id="phone" class="form-control" placeholder="رقم الموبيل ( اختياري )" name="userPhone">
                                 <div class="form-control-position">
-                                  <i class="ft-lock"></i>
+                                  <i class="ft-phone"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="form-group row">
+                            <label class="col-md-3 label-control" for="address">العنوان</label>
+                            <div class="col-md-9">
+                              <div class="position-relative has-icon-left">
+                                <input type="text" id="address" class="form-control" placeholder="العنوان" name="employeename">
+                                <div class="form-control-position">
+                                  <i class="ft-map"></i>
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <div class="form-group row last">
-                            <label class="col-md-3 label-control" for="password"> تأكيد كلمة المرور</label>
-                            <div class="col-md-9">
-                              <div class="position-relative has-icon-left">
-                                <input type="password" id="password" class="form-control" placeholder="تأكيد كلمة المرور" name="password">
-                                <div class="form-control-position">
-                                  <i class="ft-lock"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
           
+                          <div class="form-group row ">
+                            <label class="col-md-3 label-control" for="timesheetinput7">ملاحظات</label>
+                            <div class="col-md-9">
+                              <div class="position-relative has-icon-left">
+                                <textarea id="timesheetinput7" rows="5" class="form-control" name="notes" placeholder="اضف ملاحظات عن العميل هنا"></textarea>
+                                <div class="form-control-position">
+                                  <i class="ft-file"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="form-group row">
+                          <label class="col-md-3 label-control" for="nameUser">أسم الدخول  </label>
+                          <div class="col-md-9">
+                            <div class="position-relative has-icon-left">
+                              <input type="text" id="nameUser" class="form-control" placeholder="اسم العميل " name="nameLogin">
+                              <div class="form-control-position">
+                                <i class="ft-user"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group row last">
+                          <label class="col-md-3 label-control" for="password">كلمة المرور</label>
+                          <div class="col-md-9">
+                            <div class="position-relative has-icon-left">
+                              <input type="password" id="password" class="form-control" placeholder="كلمة المرور" name="password">
+                              <div class="form-control-position">
+                                <i class="ft-lock"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="form-actions right">
                           <button type="button" class="btn btn-raised btn-primary">
                             <i class="fa fa-check-square-o"></i> حفظ
@@ -215,25 +286,25 @@
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
     <!-- BEGIN VENDOR JS-->
-    <script src="admin/app-assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/core/bootstrap.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/prism.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/jquery.matchHeight-min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/screenfull.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/prism.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/screenfull.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/pace/pace.min.js" type="text/javascript"></script>
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="admin/app-assets/vendors/js/datatable/datatables.min.js" type="text/javascript"></script>
+    <script src="app-assets/vendors/js/datatable/datatables.min.js" type="text/javascript"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN APEX JS-->
-    <script src="admin/app-assets/js/app-sidebar.js" type="text/javascript"></script>
-    <script src="admin/app-assets/js/select2.full.min.js" type="text/javascript"></script>
-    <script src="admin/app-assets/js/notification-sidebar.js" type="text/javascript"></script>
-    <script src="admin/app-assets/js/customizer.js" type="text/javascript"></script>
+    <script src="app-assets/js/app-sidebar.js" type="text/javascript"></script>
+    <script src="app-assets/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="app-assets/js/notification-sidebar.js" type="text/javascript"></script>
+    <script src="app-assets/js/customizer.js" type="text/javascript"></script>
     <!-- END APEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="admin/app-assets/js/tooltip.js" type="text/javascript"></script>
+    <script src="app-assets/js/tooltip.js" type="text/javascript"></script>
 
     <!-- END PAGE LEVEL JS-->
   </body>
